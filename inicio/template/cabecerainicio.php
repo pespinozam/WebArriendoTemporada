@@ -41,7 +41,7 @@ if(empty($_SESSION["id"])){
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -84,13 +84,13 @@ if(empty($_SESSION["id"])){
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="inicio.php">Inicio</a></li> 
-          <li><a class="nav-link scrollto " href="#departamento">Departamentos</a></li>
-          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto " href="http://localhost/sitiowebportafolio/inicio/inicio.php#departamento">Departamentos</a></li>
+          <li><a class="nav-link scrollto" href="http://localhost/sitiowebportafolio/inicio/inicio.php#services">Servicios</a></li>
+          <li><a class="nav-link scrollto" href="http://localhost/sitiowebportafolio/inicio/inicio.php#team">Team</a></li>
           <li><a class="nav-link scrollto" href="contacto.php">Contacto</a></li>
           <li><a class="nav-link scrollto" href="../login2.0/registro/cerrar_sesion.php">Cerrar Sesion</a></li>
-          <li><a class="nav-link scrollto" href="../Arrendar/carrito.php">
-            Carrito<span id ="num_cart" class="badge bg-secondary"><?php echo $num_cart; ?> </span>
+          <li><a class="nav-link scrollto" href="carrito.php">
+            Carrito                            <span id ="num_cart" class="badge bg-secondary"></span>
           </a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -98,14 +98,7 @@ if(empty($_SESSION["id"])){
 
     </div>
   </header>
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
-      <h1>Bienvenido</h1>
-      <h2>En Arriendo Temporada encontraras lo que deseas, con vistas hermosas y precios accesibles</h2>
-      <a href="#departamento" class="btn-get-started scrollto">Ver más....</a>
-    </div>
-  </section><!-- End Hero -->
   
-
+  
 <main id="main">
   <br><br>

@@ -19,7 +19,7 @@ if($id == '' || $token == ''){
         exit;
     }}
 
-include("../admin/config/bdDepartamento.php");
+include("../admin/config/bd2.php");
 
     if (!isset($_GET['id'])) {
       header ("Location:inicio.php");
@@ -43,23 +43,48 @@ include("../admin/config/bdDepartamento.php");
 
       <div class="col-md-6 order-md-2">
         <div class="portfolio-info">
-          <h3><?php echo $departamentoResultado->nombre; ?></h3>
+          <h3><?php echo $departamentoResultado->nombre; ?></h3><input type="text" class="d-none" value="<?php echo $departamentoResultado->nombre; ?>" id="nombreProddepartamento<?php echo $departamentoResultado->id; ?>">
             <ul>
               <li><strong>Habitaciones: </strong><?php echo $departamentoResultado->habitaciones; ?></li>
               <li><strong>Categoria: </strong><?php echo $departamentoResultado->estrellas; ?> Estrellas</li>
-              <li><strong>Valor por noche:</strong> <?php echo MONEDA . number_format($departamentoResultado->precio,3,'.','.'); ?></li>
+              <li><strong>Valor por noche:</strong> <?php echo MONEDA . number_format($departamentoResultado->precio,3,'.','.'); ?>
+                  <input type="text" class="d-none" value="<?php echo $departamentoResultado->precio; ?>" id="precioProddepartamento<?php echo $departamentoResultado->id; ?>">
+                  <input type="text" class="d-none" value="reserva" id="origenProddepartamento<?php echo $departamentoResultado->id; ?>">
+                  <input type="text" class="d-none" value="1" id="cantidadProddepartamento<?php echo $departamentoResultado->id; ?>">
+                  <input type="text" class="d-none" value="<?php echo $departamentoResultado->id; ?>" id="idProddepartamento<?php echo $departamentoResultado->id; ?>">
+                  <input type="text" class="" value="<?php echo $departamentoResultado->id; ?>" id="prodepartamento<?php echo $departamentoResultado->id; ?>">
+              </li>
             </ul>
           </div>
 
           <h2>Departamento de lujo!</h2>
           <p><?php echo $departamentoResultado->descripcion; ?></p>
           <br><br><br><br><br><br><br><br><br><br>
-        <div class="d-grid gap-3 col-12 mx-auto"">
+        <div class="d-grid gap-3 col-12 mx-auto">
           <a href="../paypal2/index.php"><button class = "btn btn-primary" type="button" href="">Arrendar Ahora</button></a>
-          <button class = "btn btn-outline-primary" type="button" onclick="addProducto (<?php echo $id;?>, '<?php  echo $token_tmp; ?>')">Guardar</button>
+          <button class = "btn btn-outline-primary" type="button" onclick="addProductoLS('departamento', '<?php echo $departamentoResultado->id; ?>');">Añadir al Carro</button>
         </div>
 
 
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-12 col-md-6">
+          <h1>TOUR A LA MIERDA</h1><input type="text" class="" value="TOUR A LA MIERDA" id="nombreProdtour1">
+      </div>
+      <div class="col-12 col-md-6">
+          <h4>PRECIO:</h4><input type="text" class="" value="1" id="precioProdtour1">
+      </div>
+      <div class="col-12 col-md-6">
+        <h4>ID:</h4><input type="text" class="" value="1" id="idProdtour1">
+      </div>
+      <div class="col-12 col-md-6">
+        <h4>Cantidad:</h4><input type="text" class="" value="1" id="cantidadProdtour1">
+        <input type="text" class="" value="tour" id="origenProdtour1">
+      </div>
+      <div class="col-12 col-md-6">
+        <button class = "btn btn-outline-primary" type="button" onclick="addProductoLS('tour','1');">Añadir al Carro</button>
       </div>
     </div>
   </div>
