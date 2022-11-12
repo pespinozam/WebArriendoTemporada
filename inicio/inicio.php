@@ -1,14 +1,20 @@
 <?php include("template/cabecerainicio.php");?>
 
 
-
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <h1>Bienvenido</h1>
+      <h2>En Arriendo Temporada encontraras lo que deseas, con vistas hermosas y precios accesibles</h2>
+      <a href="#departamento" class="btn-get-started scrollto">Ver más....</a>
+    </div>
+</section>
 <div class="container">
   <div class="row">
 <?php 
 require '../bda.php';
 
 
-include("../admin/config/bdDepartamento.php");
+include("../admin/config/bd2.php");
 $sentenciaSQL= $conexion->prepare("SELECT * FROM departamentos");
 $sentenciaSQL->execute();
 $listadepartamentos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -26,7 +32,7 @@ $listadepartamentos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 <?php foreach($listadepartamentos as $departamento){  ?>
     <div class="col-md-3">
         <div class="card">
-            <img class="card-img-top img-thumbnail rounded mx-auto d-block" src="../img/<?php echo $departamento['imagen']?>" alt="">
+            <img class="card-img-top img-thumbnail rounded mx-auto d-block" style="max-with: 204px; max-height: 250px; min-with: 204px; min-height: 250px;" src="../img/<?php echo $departamento['imagen']?>" alt="">
             <div class="card-body">
                 <h4 class="card-title"><?php echo $departamento['nombre']?></h4>
                 <p><?php echo $departamento['precio']?></p>
