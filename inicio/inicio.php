@@ -183,7 +183,7 @@ $accion=(isset($_POST['accion']))?$_POST['accion']:"";
 
 
 
-include("../admin/config/bdContacto.php");
+include("../admin/config//bdsitio.php");
 
 switch($accion){
     case "Agregar":

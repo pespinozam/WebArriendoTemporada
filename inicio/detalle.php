@@ -27,7 +27,7 @@ include("../admin/config/bdsitio.php");
     }
 
     $id=$_GET['id'];
-    $sentencia=$conexion->prepare("SELECT * FROM departamentos WHERE id=?; ");
+    $sentencia=$conexion->prepare("SELECT * FROM departamentos INNER JOIN servicios ON departamentos.id_servicio = servicios.servicio_id WHERE id=?; ");
     $sentencia->execute([$id]);
     $departamentoResultado= $sentencia->fetch(PDO::FETCH_OBJ);
 

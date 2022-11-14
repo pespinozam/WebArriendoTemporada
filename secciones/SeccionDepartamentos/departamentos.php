@@ -254,12 +254,48 @@ $listadepartamentos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
                 <input type="file"  class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">
                 </div>
+
+                <label for="txtID_Servicio">ID:</label>
+                <input type="text" required readonly class="form-control" value = "<?php echo $txtID_Servicio; ?>" name="txtID_Servicio" id="txtID_Servicio" placeholder="ID Servicio">
+                </div>
+
+             
+
+                <div class = "form-group">
+                <label for="txtNombre_Servicio">Nombre:</label>
+                <input type="text" required readonly class="form-control" value = "<?php echo $txtNombre_Servicio; ?>" name="txtNombre_Servicio" id="txtNombre_Servicio" placeholder="Nombre Servicio">
+                </div>
+
+              
+
+                <div class = "form-group">
+                <label for="txtdescripcion_Servicio">descripcion:</label>
+                <input type="text" required readonly class="form-control" value = "<?php echo $txtdescripcion_Servicio; ?>" name="txtdescripcion_Servicio" id="txtdescripcion_Servicio" placeholder="descripcion Servicio">
+                </div>
+
+
+                <div class = "form-group">
+                <label for="txtPrecio_Servicio">Precio:</label>
+                <input type="text" required readonly class="form-control" value = "<?php echo $txtPrecio_Servicio; ?>" name="txtPrecio_Servicio" id="txtPrecio_Servicio" placeholder="Precio Servicio">
+                </div>
+
+                <div class = "form-group">
+                <label for="txtCantidad">Cantidad:</label>
+                <input type="text" required readonly class="form-control" value = "<?php echo $txtCantidad; ?>" name="txtCantidad" id="txtCantidad" placeholder="Cantidad Servicio">
+                </div>
+
+                <br><br><br>
                 
                 <div class="btn-group" role="group" aria-label="">
                     <button type="submit" name="accion" <?php echo ($accion=="Seleccionar")?"disabled":""; ?> value = "Agregar"  class="btn btn-success">Agregar</button>
                     <button type="submit" name="accion" <?php echo ($accion!=="Seleccionar")?"disabled":"";?> value = "Modificar"  class="btn btn-warning">Modificar</button>
                     <button type="submit" name="accion" <?php echo ($accion!=="Seleccionar")?"disabled":"";?> value = "Cancelar"  class="btn btn-info">Cancelar</button>
                 </div>
+                
+
+
+
+
             </form>
        
         
