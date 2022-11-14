@@ -12,7 +12,7 @@ $accion=(isset($_POST['accion']))?$_POST['accion']:"";
 
 
 
-include("../config/bdUsuario.php");
+include("../config/bdsitio.php");
 
 switch($accion){
 

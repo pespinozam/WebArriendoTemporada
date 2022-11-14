@@ -14,7 +14,7 @@
 require '../bda.php';
 
 
-include("../admin/config/bd2.php");
+include("../admin/config/bdsitio.php");
 $sentenciaSQL= $conexion->prepare("SELECT * FROM departamentos");
 $sentenciaSQL->execute();
 $listadepartamentos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);

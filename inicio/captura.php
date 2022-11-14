@@ -1,6 +1,6 @@
 <?php  
 include("../admin/config/bdPaypal.php"); 
-include("../admin/config/bdDepartamento.php");
+include("../admin/config/bdsitio.php");
 
 
 

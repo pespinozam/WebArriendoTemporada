@@ -18,8 +18,9 @@ if($id == '' || $token == ''){
         echo 'Error al procesar la petición';
         exit;
     }}
+  
 
-include("../admin/config/bd2.php");
+include("../admin/config/bdsitio.php");
 
     if (!isset($_GET['id'])) {
       header ("Location:inicio.php");
@@ -29,6 +30,8 @@ include("../admin/config/bd2.php");
     $sentencia=$conexion->prepare("SELECT * FROM departamentos WHERE id=?; ");
     $sentencia->execute([$id]);
     $departamentoResultado= $sentencia->fetch(PDO::FETCH_OBJ);
+
+    
 
 
 ?>
