@@ -148,7 +148,7 @@ $listaservicios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
         <tbody>
         <?php foreach($listaservicios as $servicios){?>
             <tr>
-                <td><?php echo $servicios['id']; ?></td>
+                <td><?php echo $servicios['servicio_id']; ?></td>
                 <td><?php echo $servicios['nombre']; ?></td>
                 <td><?php echo $servicios['descripcion']; ?></td>
                 <th><?php echo $servicios['precio']; ?></th>
@@ -160,7 +160,7 @@ $listaservicios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             
                     <form  method="post">
 
-                        <input type="hidden" name="txtID" id="txtID" value = "<?php echo $servicios['id']; ?>" />
+                        <input type="hidden" name="txtID" id="txtID" value = "<?php echo $servicios['servicio_id']; ?>" />
 
 
 
